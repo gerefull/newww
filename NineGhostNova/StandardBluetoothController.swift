@@ -1188,7 +1188,7 @@ final class StandardBluetoothController: NSObject, ObservableObject {
     }
 }
 
-extension NovaBluetoothController: CBCentralManagerDelegate {
+extension StandardBluetoothController: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         log("CENTRAL state=\(centralStateName(central.state)) authorization=\(CBCentralManager.authorization.rawValue)")
 
@@ -1358,7 +1358,7 @@ extension NovaBluetoothController: CBCentralManagerDelegate {
     }
 }
 
-extension NovaBluetoothController: CBPeripheralDelegate {
+extension StandardBluetoothController: CBPeripheralDelegate {
     func peripheral(
         _ peripheral: CBPeripheral,
         didDiscoverServices error: Error?
