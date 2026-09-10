@@ -1,0 +1,102 @@
+name: Build unsigned iOS IPA
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - "NineGhostNova/**"
+      - "NineGhostNova.xcodeproj/**"
+      - ".github/workflows/build-ios.yml"
+  push:
+    branches: [main, agent/reliable-test-mode, agent/authorized-key-reconnect, agent/max-ui-ipa]
+    paths:
+      - "NineGhostNova/**"
+      - "NineGhostNova.xcodeproj/**"
+      - ".github/workflows/build-ios.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build NineGhost Nova
+    runs-on: macos-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Show build environment
+        run: |
+          xcodebuild -version
+          xcodebuild -project NineGhostNova.xcodeproj -scheme NineGhostNova -showBuildSettings >/dev/null
+
+      - name: Verify PROF secrets and inputs are not embedded
+        run: |
+          if grep -R -E 'Bearer [A-Za-z0-9_-]{32,}' NineGhostNova; then
+            echo "Embedded bearer credential detected"
+            exit 1
+          fi
+          if grep -R -E 'Urent/[0-9]|rawVisualNumber|67d5227cc01586ec500f68d9|Токен: 0x' NineGhostNova; then
+            echo "Embedded official-client identity, scooter number, fallback rate, or token logging detected"
+            exit 1
+          fi
+
+      - name: Run Segway protocol self-tests
+        run: |
+          xcrun swiftc \
+            NineGhostNova/SegwayProtocol.swift \
+            NineGhostNova/StandardSegwayProtocol.swift \
+            NineGhostNova/ProfSegwayProtocol.swift \
+            NineGhostNovaTests/ProtocolSelfTest.swift \
+            -o "$RUNNER_TEMP/protocol-self-test"
+          "$RUNNER_TEMP/protocol-self-test"
+
+      - name: Build device app without code signing
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project NineGhostNova.xcodeproj \
+            -scheme NineGhostNova \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath "$RUNNER_TEMP/NineGhostDerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            clean build | tee "$RUNNER_TEMP/xcodebuild.log"
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH="$RUNNER_TEMP/NineGhostDerivedData/Build/Products/Release-iphoneos/NineGhostNova.app"
+          test -d "$APP_PATH"
+          mkdir -p "$RUNNER_TEMP/Payload"
+          ditto "$APP_PATH" "$RUNNER_TEMP/Payload/NineGhostNova.app"
+          cd "$RUNNER_TEMP"
+          /usr/bin/zip -qry "NineGhost-Nova-v2.11.8-REDESIGN-unsigned.ipa" Payload
+          shasum -a 256 "NineGhost-Nova-v2.11.8-REDESIGN-unsigned.ipa" > "NineGhost-Nova-v2.11.8-REDESIGN-unsigned.ipa.sha256"
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: NineGhost-Nova-v2.11.8-REDESIGN-unsigned-IPA
+          path: |
+            ${{ runner.temp }}/NineGhost-Nova-v2.11.8-REDESIGN-unsigned.ipa
+            ${{ runner.temp }}/NineGhost-Nova-v2.11.8-REDESIGN-unsigned.ipa.sha256
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: NineGhost-Nova-build-log
+          path: ${{ runner.temp }}/xcodebuild.log
+          if-no-files-found: ignore
+          retention-days: 7

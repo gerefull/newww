@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* NineGhostNovaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* NineGhostNovaApp.swift */; };
+		A10000000000000000000002 /* NovaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* NovaTheme.swift */; };
+		A10000000000000000000003 /* SegwayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* SegwayProtocol.swift */; };
+		A10000000000000000000004 /* NovaBluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* NovaBluetoothController.swift */; };
+		A10000000000000000000005 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* RootView.swift */; };
+		A10000000000000000000007 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* KeychainStore.swift */; };
+		A10000000000000000000008 /* StandardBluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* StandardBluetoothController.swift */; };
+		A10000000000000000000009 /* StandardSegwayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000B /* StandardSegwayProtocol.swift */; };
+		A1000000000000000000000A /* ProfBluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* ProfBluetoothController.swift */; };
+		A1000000000000000000000B /* ProfSegwayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000D /* ProfSegwayProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B10000000000000000000001 /* NineGhostNovaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGhostNovaApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* NovaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaTheme.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* SegwayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegwayProtocol.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* NovaBluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaBluetoothController.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000007 /* NineGhostNova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineGhostNova.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000009 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		B1000000000000000000000A /* StandardBluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBluetoothController.swift; sourceTree = "<group>"; };
+		B1000000000000000000000B /* StandardSegwayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardSegwayProtocol.swift; sourceTree = "<group>"; };
+		B1000000000000000000000C /* ProfBluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfBluetoothController.swift; sourceTree = "<group>"; };
+		B1000000000000000000000D /* ProfSegwayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfSegwayProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F10000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				C10000000000000000000002 /* NineGhostNova */,
+				C10000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C10000000000000000000002 /* NineGhostNova */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000001 /* NineGhostNovaApp.swift */,
+				B10000000000000000000002 /* NovaTheme.swift */,
+				B10000000000000000000003 /* SegwayProtocol.swift */,
+				B10000000000000000000004 /* NovaBluetoothController.swift */,
+				B1000000000000000000000A /* StandardBluetoothController.swift */,
+				B1000000000000000000000B /* StandardSegwayProtocol.swift */,
+				B1000000000000000000000C /* ProfBluetoothController.swift */,
+				B1000000000000000000000D /* ProfSegwayProtocol.swift */,
+				B10000000000000000000005 /* RootView.swift */,
+				B10000000000000000000009 /* KeychainStore.swift */,
+				B10000000000000000000006 /* Info.plist */,
+			);
+			path = NineGhostNova;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000007 /* NineGhostNova.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D10000000000000000000001 /* NineGhostNova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = G10000000000000000000002 /* Build configuration list for PBXNativeTarget "NineGhostNova" */;
+			buildPhases = (
+				F10000000000000000000002 /* Sources */,
+				F10000000000000000000001 /* Frameworks */,
+				F10000000000000000000003 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = NineGhostNova;
+			productName = NineGhostNova;
+			productReference = B10000000000000000000007 /* NineGhostNova.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					D10000000000000000000001 = { CreatedOnToolsVersion = 16.0; };
+				};
+			};
+			buildConfigurationList = G10000000000000000000001 /* Build configuration list for PBXProject "NineGhostNova" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base, ru);
+			mainGroup = C10000000000000000000001;
+			productRefGroup = C10000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (D10000000000000000000001 /* NineGhostNova */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F10000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F10000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* NineGhostNovaApp.swift in Sources */,
+				A10000000000000000000002 /* NovaTheme.swift in Sources */,
+				A10000000000000000000003 /* SegwayProtocol.swift in Sources */,
+				A10000000000000000000004 /* NovaBluetoothController.swift in Sources */,
+				A10000000000000000000008 /* StandardBluetoothController.swift in Sources */,
+				A10000000000000000000009 /* StandardSegwayProtocol.swift in Sources */,
+				A1000000000000000000000A /* ProfBluetoothController.swift in Sources */,
+				A1000000000000000000000B /* ProfSegwayProtocol.swift in Sources */,
+				A10000000000000000000005 /* RootView.swift in Sources */,
+				A10000000000000000000007 /* KeychainStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		G10000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		G10000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		G10000000000000000000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NineGhostNova/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.11.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nineghost.lostbot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		G10000000000000000000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NineGhostNova/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.11.8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nineghost.lostbot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		G10000000000000000000001 /* Build configuration list for PBXProject "NineGhostNova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (G10000000000000000000011 /* Debug */, G10000000000000000000012 /* Release */);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		G10000000000000000000002 /* Build configuration list for PBXNativeTarget "NineGhostNova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (G10000000000000000000021 /* Debug */, G10000000000000000000022 /* Release */);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E10000000000000000000001 /* Project object */;
+}
