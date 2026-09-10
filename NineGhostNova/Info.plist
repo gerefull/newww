@@ -14,6 +14,20 @@
     <string>6.0</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
+    <key>CFBundleIconFiles</key>
+    <array>
+        <string>AppIcon60x60</string>
+    </array>
+    <key>CFBundleIcons</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>AppIcon60x60</string>
+            </array>
+        </dict>
+    </dict>
     <key>CFBundleShortVersionString</key>
     <string>2.11.8</string>
     <key>CFBundleVersion</key>

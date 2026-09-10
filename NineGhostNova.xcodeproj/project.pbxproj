@@ -11,6 +11,7 @@
 		A10000000000000000000003 /* SegwayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* SegwayProtocol.swift */; };
 		A10000000000000000000004 /* NovaBluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* NovaBluetoothController.swift */; };
 		A10000000000000000000005 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* RootView.swift */; };
+		A10000000000000000000006 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* AppIcon60x60@2x.png */; };
 		A10000000000000000000007 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* KeychainStore.swift */; };
 		A10000000000000000000008 /* StandardBluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* StandardBluetoothController.swift */; };
 		A10000000000000000000009 /* StandardSegwayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000B /* StandardSegwayProtocol.swift */; };
@@ -26,6 +27,7 @@
 		B10000000000000000000005 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B10000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B10000000000000000000007 /* NineGhostNova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NineGhostNova.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000008 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
 		B10000000000000000000009 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		B1000000000000000000000A /* StandardBluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBluetoothController.swift; sourceTree = "<group>"; };
 		B1000000000000000000000B /* StandardSegwayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardSegwayProtocol.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				B10000000000000000000005 /* RootView.swift */,
 				B10000000000000000000009 /* KeychainStore.swift */,
 				B10000000000000000000006 /* Info.plist */,
+				B10000000000000000000008 /* AppIcon60x60@2x.png */,
 			);
 			path = NineGhostNova;
 			sourceTree = "<group>";
@@ -125,7 +128,7 @@
 		F10000000000000000000003 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = ();
+			files = (A10000000000000000000006 /* AppIcon60x60@2x.png in Resources */);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
